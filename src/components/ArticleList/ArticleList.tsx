@@ -8,13 +8,16 @@ type Props = {
 
 export const ArticleList: React.FC<Props> = ({ articles }) => {
   return (
-    <div className="articles-grid">
-      {articles.map((article) => (
-        <ArticleCard
-          key={article.id}
-          article={article}
-        />
-      ))}
-    </div>
+    <section className="articles-container">
+      <ul className="articles-grid">
+        {articles.map((article) => (
+          <li key={article.id}>
+            <ArticleCard
+              article={article}
+            />
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 };

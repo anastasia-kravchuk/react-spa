@@ -3,5 +3,5 @@ export type Article = {
   title: string;
   image_url: string;
   summary: string;
-  publishedAt: string;
+  published_at: string;
 }

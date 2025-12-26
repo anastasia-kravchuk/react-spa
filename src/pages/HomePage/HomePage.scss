@@ -1,0 +1,57 @@
+@use '/src/styles/variables.scss' as vars;
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 21px 63px;;
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  &-header {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+
+.result-section {
+  margin-bottom: 45px;
+}
+
+.result-count {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  margin-bottom: 5px;
+}
+
+.visually-hidden {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+hr {
+  color: vars.$border-color;
+  opacity: 0.2;
+  width: 100%;
+  display: block;
+}
+
+.articles-section {
+  width: 100%;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .home-page {
+    padding: 50px 75px 63px;
+  }
+}
