@@ -3,9 +3,7 @@ import { SearchInput } from '../../components/SearchInput/SearchInput';
 import { useArticles } from '../../hooks/useArticles';
 import './HomePage.scss';
 export const HomePage = () => {
-  const { articles, isLoading, errorMessage } = useArticles();
-
-  console.log(articles);
+  const { articles } = useArticles();
 
   return (
     <main className="home-page">
