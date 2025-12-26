@@ -14,5 +14,3 @@ export function formatDate(dateStr: string): string {
 
   return `${month} ${day}${getDaySuffix(day)}, ${year}`;
 }
-
-console.log(formatDate("2025-12-25T05:00:30Z"))

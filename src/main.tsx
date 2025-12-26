@@ -9,13 +9,16 @@ import '@fontsource/montserrat/700.css';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { theme } from './theme.ts';
+import { ArticlesProvider } from './context/ArticlesProvider.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <BrowserRouter>
-        <App />
+        <ArticlesProvider>
+          <App />
+        </ArticlesProvider>
       </BrowserRouter>
     </ThemeProvider>
   </StrictMode>,

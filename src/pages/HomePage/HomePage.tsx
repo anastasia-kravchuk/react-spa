@@ -1,9 +1,9 @@
 import { ArticleList } from '../../components/ArticleList/ArticleList';
 import { SearchInput } from '../../components/SearchInput/SearchInput';
-import { useArticles } from '../../hooks/useArticles';
+import { useArticlesContext } from '../../hooks/useArticlesContext';
 import './HomePage.scss';
 export const HomePage = () => {
-  const { articles } = useArticles();
+  const { articles } = useArticlesContext();
 
   return (
     <main className="home-page">

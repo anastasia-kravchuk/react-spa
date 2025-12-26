@@ -32,7 +32,7 @@ export const ArticleCard: React.FC<Props> = ({ article }) => {
         <div className="card-summary">{truncateText(article.summary, 100)}</div>
         <div className="card-button">
           <Link
-            to="#"
+            to={`/article/${article.id}`}
             className="button-read-more"
           >
             Read more
