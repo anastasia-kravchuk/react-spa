@@ -38,29 +38,6 @@
   }
 }
 
-.article-footer {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  max-width: 1290px;
-  padding: 25px 15px;
-}
-
-.article-button-back {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 150%;
-  text-decoration: none;
-  color: vars.$main-text-color;
-
-  &:hover {
-    opacity: 0.8;
-  }
-}
-
 @media (min-width: 768px) {
   .article-content {
     padding: 35px 75px 50px;
@@ -73,12 +50,5 @@
     &-summary {
       font-size: 18px;
     }
-  }
-
-  .article-footer {
-    padding: 35px 75px 45px;
-  }
-  .article-button-back {
-    font-size: 16px;
   }
 }

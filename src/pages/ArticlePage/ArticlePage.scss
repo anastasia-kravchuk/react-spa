@@ -35,6 +35,18 @@
   margin: 75px auto 0;
 }
 
+.article-not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+
+  font-size: 24px;
+  font-weight: 600;
+  color: vars.$main-text-color;
+}
+
 @media (min-width: 768px) {
   .article-body-wrapper {
     margin: 150px auto 0;

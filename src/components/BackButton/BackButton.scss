@@ -1,0 +1,33 @@
+@use '/src/styles/variables.scss' as vars;
+
+.back-button {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1290px;
+  padding: 25px 15px;
+}
+
+.back-button-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  text-decoration: none;
+  color: vars.$main-text-color;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@media (min-width: 768px) {
+  .back-button {
+    padding: 35px 75px 45px;
+  }
+  .back-button-link {
+    font-size: 16px;
+  }
+}

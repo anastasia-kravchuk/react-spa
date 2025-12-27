@@ -6,7 +6,6 @@ type Props = {
 };
 
 export const ArticleContent: React.FC<Props> = ({ article }) => {
-  console.log(article.summary);
   return (
     <div className="article-content">
       <h1 className="article-content-title">{article.title}</h1>
