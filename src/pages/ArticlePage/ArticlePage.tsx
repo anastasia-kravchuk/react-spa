@@ -1,5 +1,8 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useArticlesContext } from '../../hooks/useArticlesContext';
+import './ArticlePage.scss';
+import { ArticleContent } from './ArticleContent/ArticleContent';
+import { ArrowBack } from '@mui/icons-material';
 
 export const ArticlePage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -16,18 +19,26 @@ export const ArticlePage: React.FC = () => {
   }
 
   return (
-    <section className="article-hero">
-      <img
-        src={article.image_url}
-        alt="Article photo"
-        className="article-hero-image"
-      />
+    <section className="article-container">
+      <div className="article-hero">
+        <img
+          src={article.image_url}
+          alt="Article photo"
+          className="article-hero-image"
+        />
+      </div>
 
-      <div className="article-hero-overlay">
-        <h1 className="article-title">{article.title}</h1>
+      <div className="article-body-wrapper">
+        <ArticleContent article={article} />
 
-        <div className="article-content">
-          <p>{article.summary}</p>
+        <div className="article-footer">
+          <Link
+            to="/"
+            className="article-button-back"
+          >
+            <ArrowBack className='article-button-arrow' />
+            Back to homepage
+          </Link>
         </div>
       </div>
     </section>
