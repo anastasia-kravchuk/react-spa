@@ -49,9 +49,16 @@ hr {
   width: 100%;
   display: block;
 }
+.articles-loader {
+  margin: auto;
+}
 
 @media (min-width: 768px) {
   .home-page {
     padding: 50px 75px 63px;
   }
+}
+
+mark {
+  background-color: vars.$accent-color;
 }
