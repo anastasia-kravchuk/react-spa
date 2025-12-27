@@ -1,73 +1,74 @@
-# React + TypeScript + Vite
+# 📰 Spaceflight News App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive news application that displays space-related articles with search and detailed article pages.  
+Built as a frontend task with a focus on clean UI, accessibility, and modern React architecture.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  Live Demo:
+Try the live app: [React SPA](https://react-spa-frontend.netlify.app/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔍 **Search by keywords**
+  - Filters articles by keywords in **title** and **description**
+  - Priority: **title matches > description matches**
+  - Highlighting matched keywords in yellow
+- 📰 **Articles list**
+  - Responsive grid layout
+  - Each card is fully clickable
+- 📄 **Article page**
+  - Displays article image, title, and full content
+- ⏳ **Loader**
+  - Displayed only while articles are being fetched
+  - Shown instead of article cards (search input remains visible)
+- ⚠️ **404 Page**
+  - Custom “Page not found” view with navigation back to homepage
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📌 Important Note About Article Content
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+The **Spaceflight News API** does **not provide full article text** due to copyright restrictions.  
+To demonstrate the **Article Page layout and content structure**, I intentionally added **Lorem Ipsum** as `articleContent`.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🌐 API Used
+
+**Spaceflight News API**
+
+- Base URL: [Spaceflight News API](https://api.spaceflightnewsapi.net/v4/articles)
+
+---
+
+## 🛠 Technologies Used
+- **Frontend**: React, TypeScript
+- **Styling**: SCSS
+- **State Management**: React Context
+- **API**: Fetch
+- **Material UI Icons**
+
+---
+
+## Getting started
+
+1. Clone the repository:
+```bash
+git clone https://github.com/anastasia-kravchuk/react-spa.git
+cd react-spa
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+Run the project locally:
+```bash
+npm run dev
+# or
+yarn ren dev
 ```
